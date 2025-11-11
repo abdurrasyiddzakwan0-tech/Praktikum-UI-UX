@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:azure;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER ===== */
+#header {
+    background-color:aqua;
+    text-align: center;
+    padding: 20px;
+}
+
+#header h1 {
+    color: #1e40af; /* biru tua */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+blockquote {
+    background-color: #ffeb3b;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #d4b200;
+    border-radius: 5px;
+    font-style: italic;
+    color: #222;
+    line-height: 1.5;
+}
+
+#soekarno {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* ===== NAVBAR ===== */
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ===== GAMBAR UTAMA ===== */
+.gambar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gambar img {
+    width: 280px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+/* ===== ISI ARTIKEL ===== */
+.isi {
+    width: 85%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.isi p::first-letter {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+.jawa {
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+/* ===== PROFIL DAN BAGIAN LAIN ===== */
+#profil, #beternak {
+    width: 85%;
+    margin: 25px auto;
+}
+
+#profil h3, #beternak h3 {
+    color: #000;
+    border-bottom: 2px solid #bdbdbd;
+    padding-bottom: 5px;
+}
+
+#beternak h4 {
+    color: #1e3a8a;
+}
+
+/* ===== KOLEKSI GAMBAR ===== */
+.koleksi {
+    text-align: center;
+    background-color: #f8f1da;
+    padding: 15px;
+}
+
+.koleksi img {
+    width: 160px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* ===== PROMO ===== */
+.promo {
+    background-color:aquamarine;
+    text-align: center;
+    padding: 25px;
+    border-top: 2px solid #bfa76a;
+}
+
+.promo h2 {
+    color: #1e3a8a;
+}
+
+.promo strong {
+    color: #c62828;
+}
+
+#Wa {
+    color: #1b5e20;
+    font-weight: bold;
+}
