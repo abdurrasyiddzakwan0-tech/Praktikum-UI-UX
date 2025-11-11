@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header {
+    background-color: goldenrod;
+    height: 15vh;
+    line-height: 15vh;
+}
+
+main {
+    display: flex;
+    height: 70vh;
+    line-height: 70;
+}
+
+article {
+    flex: 3;
+    order: 2;
+}
+
+aside {
+    flex: 1;
+    background-color:magenta;
+    order: 3;
+}
+
+nav {
+    flex: 1;
+    background-color: darkred;
+    order: 1;
+}
+
+footer {
+    background-color: red;
+    height: 15vh;
+    line-height: 15vh;
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+
+img {
+    width: 5%;
+}
+
+nav {
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+nav li {
+    padding: 10px;
+}
