@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Pesanan Pizza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .summary-box {
+            width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #d9534f;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #337ab7;
+            margin-top: 20px;
+        }
+        .data-item {
+            margin-bottom: 5px;
+        }
+        .data-item strong {
+            display: inline-block;
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="summary-box">
+        <h1 style="text-align: center;">🍕 Pesanan Anda Telah Dikonfirmasi!</h1>
+        <p style="text-align: center; color: green; font-weight: bold;">Terima kasih telah memesan dari Saussages | Pizza-on-demand.</p>
+
+        <div id="order-summary">
+            </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const summaryDiv = document.getElementById('order-summary');
+            let html = '';
+
+            // Fungsi untuk memformat nama kunci (contoh: "delivery_instruction" menjadi "Delivery Instruction")
+            function formatKey(key) {
+                return key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            }
+
+            // --- 1. Informasi Pelanggan ---
+            html += '<h2>Informasi Pelanggan</h2>';
+            html += '<div class="data-item"><strong>Nama</strong>: ' + (params.get('name') || '-') + '</div>';
+            html += '<div class="data-item"><strong>Alamat Pengiriman</strong>: ' + (params.get('address') || '-') + '</div>';
+            html += '<div class="data-item"><strong>Nomor Telepon</strong>: ' + (params.get('tel') || '-') + '</div>';
+            html += '<div class="data-item"><strong>Email</strong>: ' + (params.get('email') || '-') + '</div>';
+            html += '<div class="data-item"><strong>Instruksi Pengiriman</strong>: ' + (params.get('delivery_instruction') || 'Tidak ada') + '</div>';
+
+            // --- 2. Detail Pesanan Pizza ---
+            html += '<h2>Detail Pesanan Pizza</h2>';
+            html += '<div class="data-item"><strong>Jumlah Pizza</strong>: ' + (params.get('count') || '1') + '</div>';
+            html += '<div class="data-item"><strong>Jenis Crust</strong>: ' + (params.get('crust') || 'Tidak dipilih') + '</div>';
+
+            // Menangani Toppings (Checkbox)
+            const toppings = params.getAll('toppings');
+            let toppingsList = 'Tidak ada';
+            if (toppings.length > 0) {
+                toppingsList = toppings.join(', ');
+            }
+            html += '<div class="data-item"><strong>Topping Dipilih</strong>: ' + toppingsList + '</div>';
+
+            summaryDiv.innerHTML = html;
+        });
+    </script>
+
+</body>
+</html>
