@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pizza</title>
+</head> 
+<body>
+    <h1 style="text-align: center;">saussages | pizza-on-demand</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odio, dicta consectetur dignissimos amet velit. Quidem sequi, dicta a incidunt magni velit ipsum provident numquam eveniet consequatur iste voluptas similique.</p>
+    
+    <form action="praktikum2b.html" method="get">
+        <table border="0">
+            <thead> 
+                <tr>
+                    <th colspan="2" style="text-align: left;">Your Information:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="name">name:</label> </td>
+                    <td> <input type="text" name="name"> </td>
+                </tr>
+                <tr>
+                    <td><label for="address">address:</label> </td>
+                    <td> <input type="text" name="address"> </td>
+                </tr>
+                <tr>
+                    <td><label for="tel">Telephone number:</label> </td>
+                    <td> <input type="tel" name="tel"> </td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label> </td>
+                    <td> <input type="email" name="email"> </td>
+                </tr>
+                <tr>
+                    <td><label for="delivery_instruction">delivery instruction:</label> </td>
+                    <td> <textarea name="delivery_instruction" cols="21" rows="3"></textarea>
+                </tr>
+            </tbody>
+        </table>
+
+        <fieldset>
+            <legend>Design Your Dream Pizza:</legend>
+            <h4>Pizza Specs</h4>
+            <h4>Crust (choose One):</h4>
+            <ul style=" list-style: none;">
+                <li>
+                    <input type="radio" name="crust" id="crust_cw" value="Classic White">
+                    <label for="crust_cw">Classic White</label>
+                </li>
+                <li>
+                    <input type="radio" name="crust" id="crust_mg" value="Multi Grain">
+                    <label for="crust_mg">Multi Grain</label>
+                </li>
+            </ul>
+            <h4>Topping (Select all that apply):</h4>
+            <ul style=" list-style: none;">
+                <li>
+                    <input type="checkbox" name="toppings" id="topping_rs" value="Red Sauce">
+                    <label for="topping_rs">Red Sauce</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="toppings" id="topping_mc" value="Mozzarella Cheese">
+                    <label for="topping_mc">Mozzarella Cheese</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="toppings" id="topping_ms" value="Mayonnaise Sauce">
+                    <label for="topping_ms">Mayonnaise Sauce</label>
+                </li>
+            </ul>
+            <h4>Quantity</h4>
+            <label for="count">How Many Pizza:</label>
+            <input type="number" name="count" id="count" min="1" value="1">
+            <br><br>
+            
+            <button type="submit">bring me a pizza</button>
+            <button type="reset">cancel</button>
+        </fieldset>
+    </form>
+</body>
+</html>
