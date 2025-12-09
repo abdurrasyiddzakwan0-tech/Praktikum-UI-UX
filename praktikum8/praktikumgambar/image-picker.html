@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #image-display {
+            margin-top: 20px;
+            max-width: 400px;
+        }
+        select {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pilih Gambar</h2>
+    <select id="image-selector" onchange="tampilkanGambar()">
+        <option value="">-- Pilih Gambar --</option>
+        <option value="bison.jpg">Bison</option>
+        <option value="gorilla.jpg">Gorilla</option>
+        <option value="harimau.jpg">Harimau</option>
+        <option value="elang.jpg">Elang</option>
+        <option value="singa.jpg">Singa</option>
+        <option value="zebra.jpeg">Zebra</option>
+    </select>
+
+    <div id="image-display">
+        <img id="gambar" src="" alt="" style="max-width:100%; display: 10px;">
+    </div>
+
+    <script>
+        function tampilkanGambar() {
+            const selector = document.getElementById("image-selector");
+            const fileName = selector.value;
+            const gambar = document.getElementById("gambar");
+
+            if (fileName !== "") {
+                gambar.src = "images/" + fileName;
+                gambar.style.display = "block";
+                alert("Ini gambar " + fileName);
+            } else {
+                gambar.style.display = "none";
+                gambar.src = "";
+            }
+        }
+    </script>
+</body>
+</html>
